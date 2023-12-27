@@ -19,7 +19,7 @@ install react and react-DOM
 ---------------------------------
 npm install react react-dom prop-types --save
 
-npm run watch //do live changes in build folder 
+npm run watch  //Do live changes in build folder 
 npm install @babel/preset-react@^7.0.0 --save-dev 
 
 encore css and script in base.html.twig   IMP
