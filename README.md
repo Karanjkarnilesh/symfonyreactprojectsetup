@@ -24,3 +24,20 @@ npm install @babel/preset-react@^7.0.0 --save-dev
 
 encore css and script in base.html.twig   IMP
 {{ encore_entry_script_tags('app') }}
+-------------------
+app.js
+---------------
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client'
+export default class App extends Component {
+  render() {
+    return (
+      <div>app</div>
+    )
+  }
+}
+createRoot(document.getElementById('root')).render(<h1>Your App</h1>)
+// ReactDOM.render(<App/>,document.getElementById('root'));
+
+
