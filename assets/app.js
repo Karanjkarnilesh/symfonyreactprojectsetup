@@ -1,9 +1,36 @@
-/*
- * Welcome to your app's main JavaScript file!
- *
- * We recommend including the built version of this JavaScript file
- * (and its CSS file) in your base layout (base.html.twig).
- */
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter, Route,Routes } from 'react-router-dom';
+import { ColorModeContext,useMode } from './theme';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import Topbar from './scenes/global/Topbar';
+import Sidebar from './scenes/global/Sidebar';
+import Dashboard from './scenes/dashboard';
 
-// any CSS you import will output into a single css file (app.css in this case)
-import './styles/app.css';
+
+
+export default function App() {
+  const [theme,colorMode]=useMode();
+  return (
+    <>
+    <ColorModeContext.Provider value={colorMode}>
+   <ThemeProvider theme={theme}>
+      <CssBaseline/>
+    <div className='app'>
+      <Sidebar/>
+    <main className='content'>
+      <Topbar/>
+      <Routes>
+<Route path="/" element={<Dashboard/>}/>
+      </Routes>
+      </main>
+    </div>
+    </ThemeProvider>
+    </ColorModeContext.Provider>
+    </>
+  )
+}
+
+createRoot(document.getElementById('root')).render(<BrowserRouter><App/></BrowserRouter>)
+// ReactDOM.render(<App/>,document.getElementById('root'));
+
