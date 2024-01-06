@@ -7,8 +7,6 @@ import Topbar from './scenes/global/Topbar';
 import Sidebar from './scenes/global/Sidebar';
 import Dashboard from './scenes/dashboard';
 
-
-
 export default function App() {
   const [theme,colorMode]=useMode();
   return (
