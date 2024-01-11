@@ -29,3 +29,14 @@ font-family: 'source Sans 3',sans-serif;
  ::-webkit-scrollbar-track:hover{
     background: #555;
  }
+
+ .css-1t8x7v1 .ps-menu-button:hover
+ {
+   color :'#868dfb !important';
+   background-color:'transparent !important';
+ }
+
+
+ .css-1t8x7v1 .ps-menu-button:active{
+   color :' #6870fa !important';
+}

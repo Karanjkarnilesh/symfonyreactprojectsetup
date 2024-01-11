@@ -2,6 +2,7 @@ import React,{ useState } from "react";
 import { Sidebar, Menu, MenuItem, SubMenu, useProSidebar } from 'react-pro-sidebar';
 // import { Menu, MenuItem,SubMenu } from 'react-pro-sidebar';
 import { Link } from 'react-router-dom';
+import '../../styles/app.css';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PeopleOutlineOutlinedIcon from '@mui/icons-material/PeopleOutlineOutlined';
 import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined';
@@ -40,34 +41,46 @@ const sidebar=()=>{
     const [selected,setSelected]=useState('Dashboard');
     return (
         <Box  sx={{
-          "& .pro-sidebar-inner":{
+          "& .ps-sidebar-root":{
               background:`${colors.primary[400]} !important`
           },
-              "& .pro-icon-wrapper":{
+           "& .ps-sidebar-container":{
                   backgroundColor:`transparent !important`
               },
               
-                  "& .pro-inner-item":{
-                      padding :"5px 35px 5px 20px !important"
-                  },
-                  
-                  "& .pro-inner-item:hover":{
-                      color :"#868dfb !important",
-                      backgroundColor: 'transparent !important'
-                  },
-                  
-                  "& .pro-inner-item:active":{
-                      color :" #6870fa !important"
-                  },
+            "& .pro-inner-item":{
+                padding :`5px 35px 5px 20px !important`
+            },
+            
+            "& .ps-sidebar-root a:hover":{
+              color :'#868dfb !important',
+              backgroundColor:'transparent !important'
+            },
+            
+            "&:active":{
+              color :' #6870fa !important'
+            },
                 }}>
 <Sidebar collapsed={isCollapsed}  >
-  <Menu style={{background:colors.primary[400]}} >
-  <Box display="flex" justifyContent="space-between" alignItems="center" ml="15px">
-      <MenuItem>ADMINS</MenuItem>
-      <MenuItem onClick={()=>setIsCollapsed(!isCollapsed)}><MenuOutlinedIcon/> </MenuItem>
+  <Menu class="hover-menuItem" style={{background:colors.primary[400]}} >
+  <Box  display="flex" justifyContent="space-between" alignItems="center">
+  
+      <MenuItem onClick={()=>setIsCollapsed(!isCollapsed)} style={{margin:'10px 0 20px 0',color:colors.grey[100]}}
+      icon={isCollapsed ?<MenuOutlinedIcon/>:undefined}
+      ></MenuItem>
+    
       </Box>
       {!isCollapsed &&(
 <Box>
+
+  <Box display="flex" justifyContent="end" alignItems="center" ml="15px">
+
+  <Typography variant="h5" color={colors.grey[100]}
+        >ADMINS</Typography>
+      <MenuItem  style={{paddingLeft:'80px'}} onClick={()=>setIsCollapsed(!isCollapsed)}
+       ><MenuOutlinedIcon /> </MenuItem>
+
+  </Box>
     <Box  style={{ display: "flex",justifyContent:"center" }}> 
         <img alt="profile-user" width="100px" height="100px"
          src={profile} style={{cursor:"pointer",borderRadius:"50%"}}/>

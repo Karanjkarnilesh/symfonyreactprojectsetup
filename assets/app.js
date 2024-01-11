@@ -14,13 +14,15 @@ export default function App() {
     <ColorModeContext.Provider value={colorMode}>
    <ThemeProvider theme={theme}>
       <CssBaseline/>
-    <div className='app'>
+    <div className='app' style={{display:'flex'}}>
       <Sidebar/>
-    <main className='content'>
+    <main className='content' style={{width:'100vw'}} >
       <Topbar/>
+      <div style={{paddingLeft: '16px'}}>
       <Routes>
-<Route path="/" element={<Dashboard/>}/>
+          <Route path="/" element={<Dashboard/>}/>
       </Routes>
+      </div>
       </main>
     </div>
     </ThemeProvider>
