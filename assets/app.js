@@ -6,7 +6,8 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import Topbar from './scenes/global/Topbar';
 import Sidebar from './scenes/global/Sidebar';
 import Dashboard from './scenes/dashboard';
-
+import Header from './components/Header';
+import Team from "./scenes/team";
 export default function App() {
   const [theme,colorMode]=useMode();
   return (
@@ -21,7 +22,9 @@ export default function App() {
       <div style={{paddingLeft: '16px'}}>
       <Routes>
           <Route path="/" element={<Dashboard/>}/>
+          <Route path="/team" element={<Team/>}/>
       </Routes>
+      <Header/>
       </div>
       </main>
     </div>
