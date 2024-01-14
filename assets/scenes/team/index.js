@@ -121,7 +121,7 @@ const columns=[
         field: 'access',
         headerName: 'Access Level',
        flex:1,
-       //  valueFormatter :({row:{access}})=>{
+       //  renderCell:({row: {access}})=>{
 // return(
 //     <Box 
 //     width="60%"
@@ -150,7 +150,24 @@ const columns=[
 return(
 <Box m="20px">
     <Header title="Team" subTitle="Managing the Team membars"/>
-    <Box m="40px 0 0 0"  sx={{ height: 630, width: '100%'}} >
+    <Box m="40px 0 0 0"  sx={{ height: 630, width: '100%',
+   "& .MuiDataGrid-root":{border:"none"},
+   "& .MuiDataGrid-cell":{border:"none"} ,
+   "& .name-column--cell":{color:colors.greenAccent[300]},
+   "& .MuiDataGrid-columnHeader":{
+    backgroundColor:colors.blueAccent[700],
+    borderBottom:"none"
+  },
+   "& .MuiDataGrid-virtualScroller":{
+    backgroundColor:colors.primary[400]
+  },
+   "& .MuiDataGrid-footerContainer":{
+    backgroundColor:colors.blueAccent[700],
+    borderTop:"none"
+}
+
+  }} 
+   >
     <DataGrid
         rows={rows}
         columns={columns}/>

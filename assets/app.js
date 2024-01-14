@@ -3,11 +3,13 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Route,Routes } from 'react-router-dom';
 import { ColorModeContext,useMode } from './theme';
 import { CssBaseline, ThemeProvider } from '@mui/material';
+import Invoice from './scenes/invoices';
 import Topbar from './scenes/global/Topbar';
 import Sidebar from './scenes/global/Sidebar';
 import Dashboard from './scenes/dashboard';
 import Header from './components/Header';
 import Team from "./scenes/team";
+import Contacts from "./scenes/contacts";
 export default function App() {
   const [theme,colorMode]=useMode();
   return (
@@ -23,7 +25,9 @@ export default function App() {
       <Routes>
           <Route path="/" element={<Dashboard/>}/>
           <Route path="/team" element={<Team/>}/>
-      </Routes>
+          <Route path="/contact" element={<Contacts/>}/>
+          <Route path="/invoice" element={<Invoice/>}/>
+                </Routes>
       <Header/>
       </div>
       </main>

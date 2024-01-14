@@ -65,7 +65,8 @@ const sidebar=()=>{
   <Menu className="hover-menuItem" style={{background:colors.primary[600]}} >
   <Box  display="flex" justifyContent="space-between" alignItems="center">
   
-      <MenuItem onClick={()=>setIsCollapsed(!isCollapsed)} style={{margin:'10px 0 20px 0',color:colors.grey[900]}}
+      <MenuItem onClick={()=>setIsCollapsed(!isCollapsed)} style={{margin:'10px 0 20px 0'}}
+      color={colors.grey[900]}
       icon={isCollapsed ?<MenuOutlinedIcon/>:undefined}
       ></MenuItem>
     
@@ -149,7 +150,7 @@ const sidebar=()=>{
 
 
             <MenuItem
-            component={<Link to="/invoices" className="link" />}
+            component={<Link to="/invoice" className="link" />}
             icon={<ReceiptOutlinedIcon/>}
             selected={selected}
             setSelected={setSelected}
