@@ -41,3 +41,8 @@ createRoot(document.getElementById('root')).render(<h1>Your App</h1>)
 // ReactDOM.render(<App/>,document.getElementById('root'));
 
 
+write axios call to get the API response
+
+axios.get(url)
+.then(response=>{setuseState.data})
+.catch(error=>{console.log(error)});
