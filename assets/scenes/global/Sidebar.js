@@ -7,7 +7,7 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PeopleOutlineOutlinedIcon from '@mui/icons-material/PeopleOutlineOutlined';
 import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined';
 import ReceiptOutlinedIcon from '@mui/icons-material/ReceiptOutlined';
-// import PersonOutlinedIcon from '@mui/icons-material';
+import PersonOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined'; 
 import BarChartOutlinedIcon from '@mui/icons-material/BarChart';
 import PieChartOutlinedIcon from '@mui/icons-material/PieChart';
@@ -164,13 +164,14 @@ const sidebar=()=>{
   >
     Pages
   </Typography>
-   {/* <Item 
-  title="Profile Form"
-  to="/form"
-  icon={<PersonOutlinedIcon/>}
-  selected={selected}
-  setSelected={setSelected}
-  /> */}
+  <MenuItem
+component={<Link to="/form" className="link" />}
+icon={<PersonOutlinedIcon/>}
+selected={selected}
+setSelected={setSelected}
+>
+Profile Form
+</MenuItem>
 <MenuItem
 component={<Link to="/calender" className="link" />}
 icon={<CalendarTodayOutlinedIcon/>}

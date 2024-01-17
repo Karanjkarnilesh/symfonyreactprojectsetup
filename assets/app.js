@@ -10,6 +10,7 @@ import Dashboard from './scenes/dashboard';
 import Header from './components/Header';
 import Team from "./scenes/team";
 import Contacts from "./scenes/contacts";
+import Form from "./scenes/form";
 export default function App() {
   const [theme,colorMode]=useMode();
   return (
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/team" element={<Team/>}/>
           <Route path="/contact" element={<Contacts/>}/>
           <Route path="/invoice" element={<Invoice/>}/>
+          <Route path="/form" element={<Form/>}/>
                 </Routes>
       <Header/>
       </div>
