@@ -61,16 +61,17 @@ return(
     backgroundColor:colors.blueAccent[700],
     borderTop:"none"
 },
-"& .MuiDataGrid-toolbarContainer .MuiButton-text":{
-    color:`${colors.grey[100]} !important` ,
-},
+"& .MuiCheckbpx-root":{
+  color: `${colors.greenAccent[200]} ! important`}
+
 
   }} 
    >
     <DataGrid
+    checkboxSelection
         rows={mockDataInvoices}
         columns={columns}
-        components={{Toolbar:GridToolbar}}/>
+       />
        
     </Box>
 </Box>
