@@ -173,12 +173,12 @@ setSelected={setSelected}
 Profile Form
 </MenuItem>
 <MenuItem
-component={<Link to="/calender" className="link" />}
+component={<Link to="/calendar" className="link" />}
 icon={<CalendarTodayOutlinedIcon/>}
 selected={selected}
 setSelected={setSelected}
 >
-Calender
+Calendar
 </MenuItem>
 
 <MenuItem
